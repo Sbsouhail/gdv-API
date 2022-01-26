@@ -1,0 +1,108 @@
+GET http://localhost:3000/users
+
+###
+
+GET http://localhost:3000/users/nrabeb
+
+###
+
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "_id":"sbsouhail",
+    "password":"sbsouhail123",
+    "name":"souhail"
+}
+
+###
+
+DELETE http://localhost:3000/users/sbsouhail
+
+###
+
+PATCH http://localhost:3000/users/sbsouhail
+Content-Type: application/json
+
+{
+    "_id":"sbsouhail",
+    "name":"souhail2"
+}
+
+###
+
+POST http://localhost:3000/users/login/sbsouhail
+Content-Type: application/json
+
+{
+    "password":"sbsouhail123"
+}
+
+###
+
+PATCH http://localhost:3000/users/insert/p/sbsouhail
+Content-Type: application/json
+
+{
+    "_id":"alo/alo",
+    "name":"alo Project",
+    "visible":false
+}
+
+###
+
+
+PATCH http://localhost:3000/users/delete/p/sbsouhail
+Content-Type: application/json
+
+{
+    "_id":"sbsouhail/prjct1"
+}
+
+###
+
+PATCH http://localhost:3000/users/delete/v/sbsouhail
+Content-Type: application/json
+
+{
+    "_id":"sbsouhail/project3",
+    "version":{"_id":"sbsouhail/project3/version1"}
+}
+
+###
+
+
+PATCH http://localhost:3000/users/update/p/sbsouhail
+Content-Type: application/json
+
+{
+    "_id":"test2/test2",
+    "visible":true
+}
+
+###
+
+PATCH  http://localhost:3000/users/insert/v/sbsouhail
+Content-Type: application/json
+
+{
+    "_id":"test/test2",
+    "version":{
+        "_id":"test2/test2/version1",
+        "name":"first version"
+    }
+}
+
+###
+
+PATCH  http://localhost:3000/users/insert/f/sbsouhail
+Content-Type: application/json
+
+{
+    "_id":"test/test2",
+    "version":{"_id":"test2/test2/version1"},
+    "file":{
+        "_id":"test2/test2/version1/file1",
+        "name":"file1"
+    }
+}
